@@ -18,7 +18,7 @@
     <script type="text/javascript"><!--//
         var uploader = new qq.FileUploader({
             element: document.getElementById('nodethumbUpload'),
-            action: '/admin/nodethumb/nodethumb/upload.json',
+            action: Croogo.basePath+'admin/nodethumb/nodethumb/upload.json',
             onSubmit: function() { $('#nodethumbUpload .qq-upload-list').show(); },
             onComplete: function(id, fileName, response){
                 if(response && response.success)
