@@ -5,7 +5,7 @@ This plugin for Croogo CMS will give you the ability to add thumbnails to any ty
 ## Installation
 
 #### Automatic Plugin Installer
-  * Download this packahe
+  * Download this package
   * Login to your Croogo admin screen
   * Go to 'Extensions' and then choose 'Plugins'
   * Click on the Upload button
