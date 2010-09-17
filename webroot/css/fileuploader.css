@@ -1,0 +1,28 @@
+#nodethumb .qq-uploader { position:relative; width: 100%;}
+
+#nodethumb .qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background:#FF9797; text-align:center; 
+}
+#nodethumb .qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+#nodethumb .qq-upload-drop-area-active {background:#FF7171;}
+
+#nodethumb .qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
+#nodethumb .qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
+#nodethumb .qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+#nodethumb .qq-upload-file {}
+#nodethumb .qq-upload-spinner {display:inline-block; background: url(/nodethumb/img/loading.gif); width:15px; height:15px; vertical-align:text-bottom;}
+#nodethumb .qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+#nodethumb .qq-upload-failed-text {display:none;}
+#nodethumb .qq-upload-fail .qq-upload-failed-text {display:inline;}
+
+#nodethumb #nodethumbDetail { margin-top:10px; }
+#nodethumb #nodethumbDetail #nodethumbThumb { margin:0 0 5px 0; }
+#nodethumb #nodethumbDetail #nodethumbThumb img { border:1px solid #EEE; padding:1px; }
+#nodethumb #nodethumbDetail p { margin:0; font-size:10px; }
