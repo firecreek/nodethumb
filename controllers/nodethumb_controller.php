@@ -41,10 +41,16 @@
       parent::beforeFilter();
     
       $dir = WWW_ROOT  . 'img' . DS;
-      if(!is_dir($dir.'nodethumb'))
+      
+      if(!is_dir($dir.'nodethumb') && is_writable($dir))
       {
         mkdir($dir.'nodethumb', 0777);
       }
+      elseif(!is_writable($dir))
+      {
+        die('Make sure '.$dir.' is writable. I want to create a nodethumb directory');
+      }
+      
       $this->dir = WWW_ROOT  . 'img' . DS . 'nodethumb' . DS;
     }
     
@@ -78,6 +84,7 @@
       $success = false;
       $thumbFilename = 'thumb_'.$result['file'];
       
+      //Resize
       if(empty($thumb_height) && !empty($thumb_width))
       {
         $success = $this->_resizeImage('resize', $result['file'], $this->dir, $thumbFilename, $thumb_width, FALSE, $thumb_quality);
@@ -91,6 +98,7 @@
         $success = $this->_resizeImage('resizeCrop', $result['file'], $this->dir, $thumbFilename, $thumb_width, $thumb_height, $thumb_quality);
       }
       
+      //Return
       $this->set(compact('success','thumbFilename'));
     }
     

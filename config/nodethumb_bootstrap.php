@@ -1,6 +1,14 @@
 <?php
 
   /**
+   * Admin menu
+   *
+   * Link to settings
+   */
+  Croogo::hookAdminMenu('Nodethumb');
+
+
+  /**
    * Admin tab
    *
    * Thumbnail tab addition to add and edit
